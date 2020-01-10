@@ -1,13 +1,28 @@
-var express = require('express')
+let router = require('express').Router()
 var db = require('../models')
-var router = express.Router()
+let isAdminLoggedIn = require('../middleware/isAdminLoggedIn')
+let isLoggedIn = require('../middleware/isLoggedIn')
 
 //show user gardens
-router.get('/', (req, res) => {
-	res.render('gardens/index')
-	console.log(req.body)
 
-})
+router.get('/', isLoggedIn, (req, res) => {
+	db.user.findOne({
+		where: { id: req.user.id },
+		include: [db.garden]
+	  })
+	.then(user => {
+	  res.render('gardens/index', { user })
+	})
+	.catch(err => {
+	  console.log(err)
+	})
+  })
+
+// // router.get('/profile', (req, res) => {
+// // 	res.render('gardens/index')
+// // 	console.log(req.body)
+
+// })
 
 // POST create a new garden
 router.post('/new', function(req, res) {

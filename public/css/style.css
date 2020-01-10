@@ -244,3 +244,21 @@ th {
 	color: white;
 	background-color: rgba(235, 194, 47, .7);
 }
+
+#gardenList a {
+	text-decoration: underline;
+}
+
+.gardens {
+	margin: 20px 0 0 0;
+	padding: 10px;
+	background-color: rgba(47, 79, 36);
+	border: solid 4px  #5c7971;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.gardenInfo {
+
+}

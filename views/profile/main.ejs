@@ -10,9 +10,15 @@
     <p>Location: <%= user.location%></p>
   </div>
     <div id="gardenList">
-      <h2>myGardens:</h2>
-      <p>Garden1</p>
-      <p>Garden2</p>
-      <p>Garden3</p>
+      <h2>My Gardens:</h2>
+      <% if (user && user.gardens) { %>
+        <% user.gardens.forEach(function(a) { %>
+          <div>
+            <h2>
+              <a href="/gardens"><%= a.name %></a>
+            </h2>
+          </div>
+        <% }) %>
+      <% } %>
     </div>
 </div>

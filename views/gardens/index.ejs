@@ -1,21 +1,20 @@
 <div class="gardens">
-</div>
-
-<div class="gardenInfo">
-	<h2>myGardens:</h2>
-	<p id="gName">Name</p>
-	<p id="gLocation">Location</p>
-	<p id="gAspect">Aspect</p>
-	<p id="gExposure">Exposure</p>
-	<p id="gSoilType">Soil Type</p>
-	<p id="gMoisture">Moisture Level</p>
-</div>
-
-<div class="gardenPlants">
-	<div id="pName">
-		<h3>Plant Name</h3>
-		<img src="" alt="">
-		<p>More Info: <a href="plantLink"></a></p>
+	<div class="gardenInfo">
+			<% if (user && user.gardens) { %>
+			<% user.gardens.forEach(function(a) { %>
+				<div class="mygarden-info">
+				<h2>myGarden Name: <%= a.name %> </h2>
+					<p id="gLocation">Location: <%= a.location %> </p>
+					<p id="gAspect">Aspect: <%= a.aspect %></p>
+					<p id="gExposure">Exposure: <%= a.exposure %></p>
+					<p id="gSoilType">Soil Type: <%= a.soilType %></p>
+					<p id="gMoisture">Moisture Level: <%= a.moistureLevel %></p>
+					<form method="POST">
+						<button type="submit">DELETE GARDEN</button>
+					</form>
+					<hr>
+			</div>
+			<% }) %>
+		<% } %>
 	</div>
-
 </div>
