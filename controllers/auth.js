@@ -14,9 +14,9 @@ router.get('/login', (req, res) => {
 
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/profile',
-  successFlash: 'Yay, we logged in!',
+  successFlash: 'Login Successful',
   failureRedirect: '/auth/login',
-  failureFlash: 'Invalid Credentials :('
+  failureFlash: 'Invalid Credentials - Try Again'
 }))
 
 router.get('/signup', (req, res) => {
@@ -41,9 +41,9 @@ router.post('/signup', (req, res, next) => {
         // Now, I want to automatially log in the user to their new acct
         passport.authenticate('local', {
           successRedirect: '/profile',
-          successFlash: 'Yay, successful account creation!',
+          successFlash: 'Successful account creation!',
           failureRedirect: '/auth/login',
-          failureFlash: 'Wat. This should never happen??'
+          failureFlash: 'Uh oh, there was an issue with account creation. Try again.'
         })(req, res, next)
       }
       else {

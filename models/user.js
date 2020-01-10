@@ -41,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
+    location: DataTypes.STRING,
     admin: DataTypes.BOOLEAN
   }, {
     hooks: {

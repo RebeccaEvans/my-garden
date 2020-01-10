@@ -1,21 +1,17 @@
-<h1>Login</h1>
 
-<div class="row">
-  <form method="POST" action="/auth/login" class="col s12">
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="email" type="email" class="validate" name="email">
-        <label for="email">Email</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="password" type="password" class="validate" name="password">
-        <label for="password">Password</label>
-      </div>
-    </div>
-    <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Log Me In
-      <i class="material-icons right">send</i>
-    </button>
+<div id="signIn">
+  <h2>Sign In:</h2>
+  <form id="auth" method="POST" action="/auth/login">
+    <input id="email" type="email" class="validate" name="email">
+    <label for="email">Email</label>
+    <br>
+    <input id="password" type="password" class="validate" name="password">
+    <label for="password">Password</label>
+    <br>
+    <button type="submit" name="action">LOG IN</button>
   </form>
+  <hr>
+  <div id="invite">
+    <p>Don't have an account? &nbsp &nbsp<a href="/newuser"><b>Sign up for a myGarden Account</b></a> - it's free!</p>
+  </div>
 </div>

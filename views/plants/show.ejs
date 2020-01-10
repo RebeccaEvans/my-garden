@@ -1,0 +1,24 @@
+
+<div class="singlePlant">
+		<div id="plantImage">
+			<img src="<%= plant.imgUrl %>" alt="plant image">
+		</div>
+		<div id="plantInfo">
+			<h2><b>Latin Name:</b>&nbsp &nbsp <em><%= plant.latinName %></em></h2>
+			<h3><b>Common Name:</b>&nbsp &nbsp <%= plant.commonName ? plant.commonName.toUpperCase() : 'NONE LISTED' %></h3>
+			<hr>
+			<p><b>Type:</b>&nbsp &nbsp<%= plant.plantType %></p>
+			<p><b>Foliage:</b>&nbsp &nbsp<%= plant.foliage %></p>
+			<p><b>Hardiness:</b>&nbsp &nbsp<%= plant.hardiness %></p>
+			<p><b>Exposure:</b>&nbsp &nbsp<%= plant.exposure %></p>
+			<p><b>Water Requirements:</b>&nbsp &nbsp<%= plant.waterReq %></p>
+			<p><b>Seasonal Interest:</b>&nbsp &nbsp<%= plant.seasonalInt %></p>
+			<p><b>More Info:</b>&nbsp &nbsp <a href="<%= plant.url %>">See plant at Great Plant Picks website</a>  </p>
+		</div>
+		<div id="addButton">
+			<form action="POST">
+				<button type="submit">ADD TO MY GARDEN</button>	
+			</form>
+			
+		</div>
+</div>

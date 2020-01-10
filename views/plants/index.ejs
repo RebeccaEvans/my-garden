@@ -1,0 +1,24 @@
+<div class="allPlants">
+	<div class="plantTable">
+		<table class="searchable sortable" id = "plantTable">
+			<caption>PLANT LIST</caption>
+			<thead>
+			<tr>
+				<th class="latin">LATIN NAME</th>
+				<th class="common">COMMON NAME</th>
+				<th class="type">PLANT TYPE</th>
+			</tr>
+			</thead>
+			<tbody>
+				<% plants.forEach(function(plant) { %>
+					<tr>
+						<td><a href="/plants/<%= plant.id %>"><%= plant.latinName%></a></td>
+						<td> <%= plant.commonName ? plant.commonName.toUpperCase() : 'NONE LISTED' %></td>
+						<td><%= plant.plantType %></td>
+					</tr>
+
+				<% }) %>
+			</tbody>
+		</table>
+	</div>
+</div>

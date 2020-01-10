@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     aspect: DataTypes.STRING,
     exposure: DataTypes.STRING,
     soilType: DataTypes.STRING,
-    moistureLevel: DataTypes.STRING
+    moistureLevel: DataTypes.STRING,
+    userId: DataTypes.INTEGER
   }, {});
   garden.associate = function(models) {
     models.garden.belongsTo(models.user)

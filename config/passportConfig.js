@@ -48,5 +48,3 @@ passport.use(new LocalStrategy({
 
 // Make sure you can include this file in other files
 module.exports = passport
-
-

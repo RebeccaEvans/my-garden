@@ -1,19 +1,20 @@
-<nav class="teal lighten-3">
-  <div class="nav-wrapper">
-    <a href="/" class="brand-logo">BB</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="/">Home</a></li>
-      <% if (!user) { %>
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/auth/signup">Signup</a></li>
-        <% } else { %>
-          <li>Hi, <%= user.firstname %>!</li>
-          <% if (user.admin) { %>
-            <li><a href="/profile/admin">Admin</a></li>
-          <% } %>
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/auth/logout">Logout</a></li>
-        <% } %>
-    </ul>
-  </div>
-</nav>
+<div id="nav">
+  <div class="navWrapper">
+  <div class="nav"><a href="/">HOME</a></div>
+  <div class="nav"><a href="/plants">PLANTS</a></div>
+  <div class="nav"><a href="/gardens">GARDENS</a></div>
+  <% if (!user) { %>
+    <div class="nav"><a href="/auth/login">LOGIN</a></div>
+    <div class="nav"><a href="/auth/signup">SIGN UP</a></div>
+    <% } else { %>
+      <div class="nav"><a href="/profile">MY PROFILE</a></div>
+      <% if (user.admin) { %>
+      <div class="nav"><a href="/profile/admin">ADMIN</a></div>
+      <% } %>
+      <div class="nav"><a href="/auth/logout">LOGOUT</a></div>
+    <% } %>
+
+</div>
+  <div id="footer">
+    <h5>Created by Rebecca Evans; Copyright © 2019-<%= new Date().getFullYear() %></h5></div>
+</div>

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap');
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100px 50px 400px 150px;
+	background-color: #22265d;
+	font-family: 'Muli', sans-serif;
+	color: white;
+}
+
+#nav {
+	grid-column: 1 / 5;
+	grid-row: 1 / 2;
+	background-image: url("/images/banner.png");
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 75px 25px;
+}
+
+#alert {
+	grid-column: 1 / 5;
+	grid-row: 2 / 3;
+	display: none;
+	border: solid 2px red;
+	background-color: salmon;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+
+.navWrapper {
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.navWrapper div {
+	text-decoration: none;
+	margin: 0 20px 0 20px;
+	border-radius: 10px;
+	background-color: rgba(235, 194, 47, .7);
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px;
+	width: 175px;
+	height: 25px;
+}
+
+#footer {
+	display:flex;
+	flex-direction: row;
+	margin: 0 auto 0 auto;
+	padding: 0 5px 0 5px;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	background-color: rgba(34, 38, 93, .5);
+
+}
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: white;
+}
+a:visited {
+	color: white;
+}
+a:hover {
+	color: #702659;
+}
+
+input {
+	width: 400px;
+	color:#5c7971;
+	font-size: 20px;
+	text-align: center;
+	margin: 10px;
+	font-family: 'Muli', sans-serif;
+}
+
+button {
+	width: 200px;
+	font-size: 20px;
+	text-align: center;
+	margin: 10px;
+	border-radius: 20px;
+	color: white;
+	background-color: #5c7971;
+	border: solid 2px  #5c7971;
+	font-family: 'Muli', sans-serif;
+}
+
+.main {
+	grid-column: 1 / 5;
+	grid-row: 3 / 5;
+}
+
+.container {
+	margin: 20px 0 0 0;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(47, 79, 36);
+	border: solid 4px  #5c7971;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.userProfile {
+	display: grid;
+	grid-template-columns: 1fr 1fr 3fr;
+	grid-template-rows: 100px 400px;
+	margin: 20px 0 0 0;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(47, 79, 36);
+	border: solid 4px  #5c7971;
+	border-radius: 5px;
+}
+
+#userImage img {
+	max-height: 150%;
+	max-width: 150%;
+}
+
+.singlePlant  {
+	display: grid;
+	grid-template-columns: 1.5fr 2fr 1fr;
+	grid-template-rows: 450px;
+	margin: 20px 0 0 0;
+	background-color: rgba(47, 79, 36);
+	border: solid 4px  #5c7971;
+	border-radius: 5px;
+}
+
+#plantImage, #plantInfo, #addButton {
+	padding: 10px;
+	height: 100%;
+}
+
+#addButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.singlePlant img {
+	max-height: 90%;
+	max-width: 90%;
+}
+
+.allPlants {
+	margin: 20px 0 0 0;
+	padding: 20px;
+	background-color: rgba(47, 79, 36);
+	border: solid 4px  #5c7971;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+#plantInfo a {
+	text-decoration: underline;
+}
+
+
+table {
+	border: 1px solid #5c7971;
+	font-size: 14px;
+	font-family: 'Muli', sans-serif;
+	width: 100%;
+
+}
+
+table caption {
+	font-size: 30px;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+	border-bottom: 1px solid #5c7971;
+}
+
+td a  {
+	text-decoration: underline;
+}
+
+th {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.newUser {
+	margin: 20px 0 0 0;
+	padding: 10px;
+	background-color: rgba(47, 79, 36);
+	border: solid 4px  #5c7971;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+#userForm {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto 10px auto;
+	background-color: #5c7971;
+	border-radius: 5px;
+}
+#userForm form {
+	margin: 15px 0 0 0;
+}
+#userTitle {
+	display:flex;
+	justify-content: center;
+}
+
+.userInput {
+	padding: .5em;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.userInput input {
+	text-align: left;
+	margin: 0 10px 0 10px;
+}
+
+.submitBtn {
+	padding: 15px;
+	text-align: center;
+	justify-content: center;
+}
+.submitBtn button {
+	padding: 15px;
+	border-radius: 10px;
+	color: white;
+	background-color: rgba(235, 194, 47, .7);
+}

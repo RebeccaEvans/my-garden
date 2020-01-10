@@ -27,6 +27,9 @@ module.exports = {
       photoUrl: {
         type: Sequelize.STRING
       },
+      location: {
+        type: Sequelize.STRING
+      },
       admin: {
         type: Sequelize.BOOLEAN,
         defaultValue: false

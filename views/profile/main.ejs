@@ -1,12 +1,18 @@
-<h1><%= user.username %>'s Profile</h1>
-<div class="row">
-  <div class="col s4">
-    <img class="responsive-img" alt="user image" src="<%= user.photoUrl %>">
+<div class="userProfile">
+  <div id="userImage">
+    <img src="<%= user.photoUrl %>" alt="profile picture" id="profile-pic">
   </div>
-  <div class="col s8">
-    <h2><%= user.username %></h2>
+  <div id="userInfo">
+    <h2>Hello <%= user.username %>!</h2>
+    <hr>
     <p><strong>Full Name:</strong><%= user.firstname %> <%= user.lastname %></p>
     <p><strong>Admin Status:</strong> <%= user.admin ? 'Yes' : 'No' %></p>
-    <p><%= user.bio %></p>
+    <p>Location: <%= user.location%></p>
   </div>
+    <div id="gardenList">
+      <h2>myGardens:</h2>
+      <p>Garden1</p>
+      <p>Garden2</p>
+      <p>Garden3</p>
+    </div>
 </div>
