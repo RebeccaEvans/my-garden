@@ -1,35 +1,42 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('users', {
+    return queryInterface.createTable('plants', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstname: {
+      url: {
         type: Sequelize.STRING
       },
-      lastname: {
+      latinName: {
         type: Sequelize.STRING
       },
-      email: {
-        allowNull: false,
+      commonName: {
         type: Sequelize.STRING
       },
-      username: {
+      imgUrl: {
         type: Sequelize.STRING
       },
-      password: {
+      plantType: {
         type: Sequelize.STRING
       },
-      photoUrl: {
+      foliage: {
         type: Sequelize.STRING
       },
-      admin: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false
+      hardiness: {
+        type: Sequelize.STRING
+      },
+      exposure: {
+        type: Sequelize.STRING
+      },
+      waterReq: {
+        type: Sequelize.STRING
+      },
+      seasonalInt: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -42,6 +49,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('users');
+    return queryInterface.dropTable('plants');
   }
 };

@@ -1,13 +1,13 @@
 {
-  "name": "auth-boiler",
+  "name": "my-garden",
   "version": "1.0.0",
-  "description": "",
+  "description": "a website for garden enthusiasts",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rebecca Evans",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

@@ -24,7 +24,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     username: DataTypes.STRING,
-    birthdate: DataTypes.DATE,
     password: {
       type: DataTypes.STRING,
       validate: {
@@ -42,7 +41,6 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    bio: DataTypes.TEXT,
     admin: DataTypes.BOOLEAN
   }, {
     hooks: {
@@ -59,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
   })
 
   user.associate = function(models) {
-    // associations can be defined here
+    models.user.hasMany(models.garden)
   }
 
   user.prototype.validPassword = function(typedInPassword) {
