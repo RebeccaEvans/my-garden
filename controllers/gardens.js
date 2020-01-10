@@ -18,13 +18,6 @@ router.get('/', isLoggedIn, (req, res) => {
 	})
   })
 
-// // router.get('/profile', (req, res) => {
-// // 	res.render('gardens/index')
-// // 	console.log(req.body)
-
-// })
-
-// POST create a new garden
 router.post('/new', function(req, res) {
 	db.garden.create({
 		name: req.body.name,
